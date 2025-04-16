@@ -1,0 +1,10 @@
+---
+services:
+  certbot:
+    image: ghcr.io/gottaeat/certbot-sock:latest
+    hostname: certbot
+    container_name: certbot
+    restart: no
+    volumes:
+      - ./data:/etc/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock
