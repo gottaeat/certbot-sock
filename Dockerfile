@@ -1,2 +1,4 @@
-FROM certbot/dns-cloudflare:v4.1.1 AS certbot-sock
-RUN apk add docker-cli
+FROM certbot/dns-cloudflare:v5.2.2 AS certbot-sock
+RUN \
+    apk update && \
+    apk --no-cache add docker-cli
